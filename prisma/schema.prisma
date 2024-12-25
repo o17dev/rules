@@ -1,0 +1,89 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Language {
+  en    // English
+  zh    // Chinese
+  ja    // Japanese
+  ko    // Korean
+  // 可以继续添加更多语言
+}
+
+model RuleTranslation {
+  id        String   @id @default(cuid())
+  content   String   // 翻译后的内容
+  language  Language // 语言类型
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  rule   Rule   @relation(fields: [ruleId], references: [id], onDelete: Cascade)
+  ruleId String
+
+  @@unique([ruleId, language])  // 确保每个规则在每种语言下只有一个翻译
+  @@index([language])           // 为语言字段添加索引以提高查询性能
+  @@map("rule_translations")
+}
+
+model Rule {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  content   String
+  status    Int      @default(0)  // 0: 待审核, 1: 已通过可展示
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  author   Author @relation(fields: [authorId], references: [id])
+  authorId String
+
+  tags Tag[]
+  libs Library[]
+  translations RuleTranslation[] // 添加翻译关联
+
+  @@map("rules")
+}
+
+model Author {
+  id        String   @id @default(cuid())
+  name      String
+  url       String?
+  avatar    String?
+  email     String   @default("cursor.directory")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  rules Rule[]
+
+  @@map("authors")
+}
+
+model Tag {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  rules Rule[]
+
+  @@map("tags")
+}
+
+model Library {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  rules Rule[]
+
+  @@map("libraries")
+}

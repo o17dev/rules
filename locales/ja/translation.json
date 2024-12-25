@@ -1,0 +1,16 @@
+{
+  "header": {
+    "submit": "送信",
+    "about": "約",
+    "learn": "学ぶ",
+    "live": "ライブ",
+    "subscribe": "購読",
+    "subscribe_placeholder": "最新の更新を受け取る",
+    "translation": "翻訳内容"
+  },
+  "login": {
+    "title": "Rulesを使ってください",
+    "description": "ログイン後に保存して管理できます",
+    "button": "GitHubアカウントでログイン"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "header": {
+    "submit": "Submit",
+    "about": "About",
+    "learn": "Learn",
+    "live": "Live",
+    "subscribe": "Subscribe",
+    "subscribe_placeholder": "Get latest updates",
+    "translation": "Translation content"
+  },
+  "login": {
+    "title": "Welcome to Rules",
+    "description": "Login after you can save and manage your custom rules",
+    "button": "Use GitHub account login"
+  }
+}

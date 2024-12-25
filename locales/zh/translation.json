@@ -1,0 +1,16 @@
+{
+  "header": {
+    "submit": "提交",
+    "about": "关于",
+    "learn": "学习",
+    "live": "实时",
+    "subscribe": "订阅",
+    "subscribe_placeholder": "获取最新更新",
+    "translation": "翻译内容"
+  },
+  "login": {
+    "title": "欢迎使用 Rules",
+    "description": "登录后可以保存和管理你的自定义规则",
+    "button": "使用 GitHub 账号登录"
+  }
+}

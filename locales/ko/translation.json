@@ -1,0 +1,16 @@
+{
+  "header": {
+    "submit": "제출",
+    "about": "소개",
+    "learn": "학습",
+    "live": "실시간",
+    "subscribe": "구독",
+    "subscribe_placeholder": "최신 업데이트를 받으세요",
+    "translation": "번역 콘텐츠"
+  },
+  "login": {
+    "title": "Rules를 사용해줘",
+    "description": "로그인 후 새 폴더와 관리할 수 있을데요?",
+    "button": "GitHub 계정로 로그인"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "header": {
+    "submit": "提交",
+    "about": "關於",
+    "learn": "學習",
+    "live": "實時",
+    "subscribe": "訂閱",
+    "subscribe_placeholder": "獲取最新更新",
+    "translation": "翻譯內容"
+  },
+  "login": {
+    "title": "歡迎使用 Rules",
+    "description": "登錄後可以保存和管理你的自定義規則",
+    "button": "使用 GitHub 帳號登錄"
+  }
+}
