@@ -19,6 +19,7 @@ import { createTranslation } from "@/actions/content-action"
 const LANGUAGES = [
   { id: 'en', label: 'English', description: 'Translate to English' },
   { id: 'zh', label: '中文', description: 'Translate to Chinese' },
+  { id: 'zh-TW', label: '中文(繁體)', description: 'Translate to Traditional Chinese' },
   { id: 'ja', label: '日本語', description: 'Translate to Japanese' },
   { id: 'ko', label: '한국어', description: 'Translate to Korean' },
 ] as const

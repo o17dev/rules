@@ -26,41 +26,20 @@ export const metadata: Metadata = {
       url: "/logo.png",
     },
   ],
-  openGraph: {
-    title: "Rules",
-    description: "Find the best cursor rules for your framework and language",
-    url: "https://cursor.directory",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "https://cdn.midday.ai/cursor/opengraph-image.png",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "https://cdn.midday.ai/cursor/opengraph-image.png",
-        width: 1800,
-        height: 1600,
-      },
-    ],
-  },
-  twitter: {
-    title: "Cursor Directory",
-    description: "Find the best cursor rules for your framework and language",
-    images: [
-      {
-        url: "https://cdn.midday.ai/cursor/opengraph-image.png",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "https://cdn.midday.ai/cursor/opengraph-image.png",
-        width: 1800,
-        height: 1600,
-      },
-    ],
-  },
+  keywords: [
+    "cursor",
+    "rules",
+    "framework",
+    "language",
+    "react",
+    "vue",
+    "svelte",
+    "angular",
+    "sveltekit",
+    "nextjs",
+    "sveltekit",
+    "cursor.directory",
+  ],
 };
 
 export const viewport = {

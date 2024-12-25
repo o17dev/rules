@@ -4,7 +4,6 @@ import { getRuleBySlug } from "@/lib/services/rule.service";
 import { prisma } from "@/lib/prisma";
 import RuleContent from "@/components/rule-content";
 
-
 export async function generateMetadata({
   params,
 }: { params: { slug: string } }) {
@@ -40,7 +39,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </div>
 
       <main className="flex-1 p-6 pt-16">
-        {/* <RuleCard rule={rule} isPage={true} /> */}
         <RuleContent
           rule={rule}
         />
@@ -49,4 +47,4 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
 }
 
-export const revalidate = 86400; // Revalidate every 24 hours (86400 seconds)
+export const dynamic = 'force-dynamic';
