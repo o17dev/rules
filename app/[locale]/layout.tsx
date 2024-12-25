@@ -119,7 +119,7 @@ export default async function RootLayout({
                 {children}
 
                 <a
-                  href="https://github.com/pontusab/cursor.directory"
+                  href="https://github.com/o17dev/rules.git"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -137,11 +137,6 @@ export default async function RootLayout({
           </TranslationsProvider>
         </SessionProvider>
       </body>
-
-      {/* <OpenPanelComponent
-        clientId={process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID!}
-        trackScreenViews
-      /> */}
     </html>
   );
 }
